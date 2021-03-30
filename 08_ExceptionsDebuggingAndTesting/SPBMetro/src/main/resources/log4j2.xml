@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <File name="search_log" fileName="logs/SPB Metro/search.log" immediateFlush="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+        <File name="input_error_log" fileName="logs/SPB Metro/input_errors.log" immediateFlush="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+        <File name="exception_log" fileName="logs/SPB Metro/exceptions.log" immediateFlush="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+    </appenders>
+    <loggers>
+
+        <Logger name="exception-logger" level="debug" additivity="false">
+            <appender-ref ref="exception_log" level="debug"/>
+        </Logger>
+        <Logger name="search-logger" level="info" additivity="false">
+            <appender-ref ref="search_log" level="info"/>
+        </Logger>
+        <Logger name="input_error-logger" level="info" additivity="false">
+            <appender-ref ref="input_error_log" level="info"/>
+        </Logger>
+
+    </loggers>
+</configuration>

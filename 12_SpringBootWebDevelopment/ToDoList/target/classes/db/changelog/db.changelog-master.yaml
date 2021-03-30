@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-todolist.yaml
+  - changeSet:
+      id: 202103051536-1
+      author: sviridenko a.v.
+      changes:
+        - sqlFile:
+              dbms: mysql
+              encoding: cp1251
+              path: sql/drop-tables.sql
+              relativeToChangelogFile: true
+              splitStatements: true
+              stripComments: false
+        - sqlFile:
+            dbms: mysql
+            encoding: cp1251
+            path: sql/create-db-roles.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+        - sqlFile:
+            dbms: mysql
+            encoding: cp1251
+            path: sql/create-db-users.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+        - sqlFile:
+            dbms: mysql
+            encoding: cp1251
+            path: sql/create-db-tasks.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: 202103051540-1
+      author: sviridenko a.v.
+      changes:
+        - sqlFile:
+            dbms: mysql
+            encoding: cp1251
+            path: sql/insert-base-roles.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
