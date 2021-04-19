@@ -1,14 +1,31 @@
 package model;
 
 import java.io.Serializable;
+import java.util.List;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
-public class Store implements Serializable {
+@ToString(callSuper = true)
+public class Store extends BaseEntity implements Serializable {
 
-  private String id;
-  private String title;
+  private final String title;
+
+  @ToString.Exclude
+  private List<Inventory> inventoryList;
+
+  public Store(@NonNull String id, @NonNull String title) {
+    super(id);
+    this.title = title;
+  }
+
+  public Store(@NonNull String id, @NonNull String title, @NonNull List<Inventory> inventoryList) {
+    super(id);
+    this.title = title;
+    this.inventoryList = inventoryList;
+  }
 
 }

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <groupId>havabox.online-store</groupId>
   <artifactId>Homework_13_4_2</artifactId>
-  <version>1.0.1</version>
-  <name>online-store</name>
   <description>Online-store</description>
+  <groupId>havabox.online-store</groupId>
+  <modelVersion>4.0.0</modelVersion>
+  <name>online-store</name>
+
+  <dependencies>
+    <dependency>
+      <artifactId>mongo-java-driver</artifactId>
+      <groupId>org.mongodb</groupId>
+      <version>3.8.2</version>
+    </dependency>
+    <dependency>
+      <artifactId>lombok</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <scope>provided</scope>
+      <version>1.18.18</version>
+    </dependency>
+  </dependencies>
 
   <properties>
     <maven.compiler.source>13</maven.compiler.source>
     <maven.compiler.target>13</maven.compiler.target>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongo-java-driver</artifactId>
-      <version>3.8.2</version>
-    </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.18</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
+  <version>1.0.1</version>
 
 </project>
